@@ -148,7 +148,7 @@ def create_app(test_config=None):
         request_counts[client_ip].append(current_time)
 
     # Register models
-    from app.models import user, account, transaction
+    from app.models import user, account, transaction, revoked_token
 
     # Register blueprints
     from app.routes import auth, accounts, transactions
